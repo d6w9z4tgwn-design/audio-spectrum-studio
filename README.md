@@ -1,10 +1,14 @@
-# audio-spectrum-studio
+# Audio Spectrum Studio
 
-WAV音声のFFTとスペクトル画像を生成。
+WAVファイルを高速フーリエ変換（FFT）で解析し、周波数成分を見やすいスペクトル画像として出力するツールです。音声のピーク周波数確認や、収録素材のノイズチェックに利用できます。
 
-Analyze WAV audio with FFT.
+## 主な機能
 
-## Setup / 起動
+- モノラル・ステレオWAVを自動的に扱えるFFT解析
+- 相対dBスケールの高解像度PNGを生成
+- 最大表示周波数を指定して、人の声など注目帯域を拡大
+
+## セットアップ
 ```bash
 python -m venv .venv
 # macOS/Linux: source .venv/bin/activate
@@ -14,7 +18,8 @@ python app.py --help
 python -m unittest -v
 ```
 
-## Usage / 使用例
-`python app.py input.wav spectrum.png --max-frequency 8000` — generates a high-resolution chart with a readable dB scale.
+## 使い方
 
-Python 3.10+ recommended. AI-generated development assistance was used.
+`python app.py input.wav spectrum.png --max-frequency 8000` を実行します。`--max-frequency` を省略すると、ナイキスト周波数まで表示します。出力先のフォルダがなければ自動作成します。
+
+Python 3.10+ 推奨。

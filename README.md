@@ -15,6 +15,6 @@ python -m unittest -v
 ```
 
 ## Usage / 使用例
-`python app.py input.wav spectrum.png`
+`python app.py input.wav spectrum.png --max-frequency 8000` — generates a high-resolution chart with a readable dB scale.
 
 Python 3.10+ recommended. AI-generated development assistance was used.
